@@ -32,12 +32,12 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### Personal Notes on the project:
 I really had fun implementing it, and I'm deeply sorry for being late, life wasn't helpful on my side :D, I have a few notes before you check the project I'd like to tell you, kindly check them:
-    1.`Verification sign beside channel title is currently not available on any of the APIs as stated on some questions on Stackoverflow`
-    2.`Mobile view Dropdown filter menu is unfortunately not working yet, the desktop collabsible menu is working properly`
-    3.`one of the reasons I was late is that I spent some time learning Flux Architecture -I didn't use it before- and unfortunately the version I tried to build with it is really buggy and not complete yet`
-    4. `I used both class components and hooks to showcase that I'm comfortable using both`
-    5. `Next possible update: Configure a Redux version and a Flux version`
-    6. `Next possible update: Handle errors more properly`
+    1. Verification sign beside channel title is currently not available on any of the APIs as stated on some questions on Stackoverflow
+    2. Mobile view Dropdown filter menu is unfortunately not working yet, the desktop collabsible menu is working properly
+    3. one of the reasons I was late is that I spent some time learning Flux Architecture -I didn't use it before- and unfortunately the version I tried to build with it is really buggy and not complete yet
+    4. I used both class components and hooks to showcase that I'm comfortable using both
+    5. Next possible update: Configure a Redux version and a Flux version
+    6. Next possible update: Handle errors more properly
 
 ### Thank you for your time, and I'm looking forward to hearing your feedback!
 
