@@ -4,7 +4,7 @@ export const axiosInstance = axios.create({
   baseURL: "https://www.googleapis.com/youtube/v3"
 });
 
-export const apiKey = "AIzaSyCMkOqgHHD35e-Bta-z7Fl-yYkFNmerut4";
+export const apiKey = "AIzaSyBA5NRibN635vYhf16_aZh9ufkyR3mOxQQ";
 
 export * from "./search/search";
 export * from "./videoStats/videoStats";

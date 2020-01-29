@@ -77,7 +77,7 @@ html {
 }
 .App {
   background-color: $color-light-grey;
-  min-height: 90vh;
+  min-height: 100vh;
 
   @include respond(below-tab) {
     background-color: $color-white;

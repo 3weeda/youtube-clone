@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import filter from "../../assets/images/filter.svg";
 import Collapsible from "react-collapsible";
 import Media from "react-media";
@@ -21,9 +21,13 @@ const options = [
 const optionsArray = ["All", "Video", "Channel"];
 
 const FiltersHeader = ({ numberOfResults, smallScreen, onAddFilter }) => {
+  const [selected, setSelected] = useState("All");
   const choose = option => {
     if (option) {
-      onAddFilter(smallScreen, option.label);
+      console.log("You selected ", option.label);
+      setSelected(option.label);
+      let filter = option.label === "All" ? "" : option.label.toLowerCase();
+      onAddFilter(smallScreen, filter);
     }
   };
 
@@ -49,7 +53,7 @@ const FiltersHeader = ({ numberOfResults, smallScreen, onAddFilter }) => {
                         {options.map(opt => (
                           <li
                             key={opt.opt}
-                            onClick={e => onAddFilter(e, smallScreen, opt.opt)}
+                            onClick={() => onAddFilter(smallScreen, opt.opt)}
                           >
                             {opt.text}
                           </li>
@@ -66,7 +70,7 @@ const FiltersHeader = ({ numberOfResults, smallScreen, onAddFilter }) => {
                   <Dropdown
                     options={optionsArray}
                     onChange={choose}
-                    value={optionsArray[0]}
+                    value={selected}
                   />
                 </form>
               )}

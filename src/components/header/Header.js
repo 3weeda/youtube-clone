@@ -20,16 +20,13 @@ class Header extends Component {
     this.setState({ searchQuery: e.target.value });
   };
   // add filter to search
-  onAddFilter = (e, isSmallScreen, filter) => {
+  onAddFilter = (isSmallScreen, filter) => {
     this.setState({ filter }, () => {
-      this.onSubmit(e, isSmallScreen, filter);
+      this.onSearch(isSmallScreen, filter);
     });
   };
   // submit search query and filter
-  onSubmit = (e, isSmallScreen, filter) => {
-    if (e) {
-      e.preventDefault();
-    }
+  onSearch = (isSmallScreen, filter) => {
     if (!this.state.showInput && isSmallScreen) {
       // show input filed if when search icon clicked
       this.setState({ showInput: true, smallScreen: true }, () => {
@@ -49,6 +46,11 @@ class Header extends Component {
         500
       );
     }
+  };
+
+  onSubmit = (e, isSmallScreen, filter) => {
+    e.preventDefault();
+    this.onSearch(isSmallScreen, filter);
   };
   render() {
     const { searchQuery, showInput, smallScreen } = this.state;
